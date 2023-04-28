@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+    #gif1{
+        position:absolute;
+        left:400px;
+        top:400px;
+        height:30%
+
+    }
+    #pic1{
+        position:absolute;
+        left:0px;
+        top:0;
+        height:100%;
+    }
+
+</style>
+</head>
+
+<body>
+<img class="i"  src="space.jpg" width = "100%" id="pic1">
+<img class="i"  src="rock.png" width = "20%" id="gif1">
+
+
+
+<script>
+
+    function fn()
+    {
+        x = x+s; y=y*s;
+        g1.style.top=x+"px"
+
+        if (x+x2>=x1){
+            s=-10;
+            count += 1
+         }
+
+        if (x<=0){
+            s=10;
+            count += 1
+        }
+        if (count == 3){return}
+        setTimeout("fn()",50);
+
+    }
+
+    p1 = document.getElementById('pic1');
+    g1 = document.getElementById('gif1');
+    count = 0;
+    x1 = p1.height;
+    x2 = g1.height;
+    x=0; y=0; s=0;
+
+    fn();
+</script>
+</body>
+</html>
